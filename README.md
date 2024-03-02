@@ -1,2 +1,0 @@
-# terash
-# terash
