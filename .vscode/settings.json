@@ -1,5 +1,7 @@
 {
     "python.analysis.extraPaths": [
-        "./data/resources"
+        "./data/resources",
+        "./data/assets",
+        "./src"
     ]
 }

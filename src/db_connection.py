@@ -1,9 +1,10 @@
 import sqlite3
-from vehicles_data import vehicles_data
-from website_data import website_data
+from assets.vehicles_data import vehicles_data
+from assets.website_data import website_data
+
 
 # Create a connection to the database
-conn = sqlite3.connect('terberg.db')
+conn = sqlite3.connect('../database/terberg.db')
 
 # Create a cursor object
 c = conn.cursor()
