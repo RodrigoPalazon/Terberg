@@ -1,6 +1,6 @@
 from src.assets.website_data import website_data
 from src.assets.vehicles_data import vehicles_data
-# import functions
+import src.model.crud_functions
 from tabulate import tabulate
 
 
