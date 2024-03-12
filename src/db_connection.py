@@ -31,7 +31,10 @@ for item in vehicles_data:
 for item in website_data:
     c.execute("INSERT INTO website VALUES (?, ?, ?)", (item['name'], item['url'], item['listing']))
 
-# # Commit changes and close connection
+# Insert data into vehicle_on_website table
+    #  TO DO
+
+# Commit changes and close connection
 conn.commit()
 conn.close()
 

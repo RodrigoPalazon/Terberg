@@ -1,5 +1,6 @@
 from src.assets.website_data import website_data
 from src.assets.vehicles_data import vehicles_data
+from src.assets.banner import *
 import src.model.crud_functions
 from tabulate import tabulate
 
@@ -18,6 +19,10 @@ def print_banner(message, width=50):
     print("+" + "-" * (width - 2) + "+")
 
 message = "WELCOME TO TERBERG BUSINESS CASE"
+
+# Example of printing the banner
+for line in banner:
+    print(line)
 
 def main():
     print()
