@@ -32,3 +32,4 @@ vehicles_data= [
     {"name": "Terberg FM2850 - 8x4 - Chassis truck+" , "subcategory":"chassis_cab_truck","price":0},
     {"name": "Terberg FM2850 - 10x4+" , "subcategory":"container_truck","price":0}
 ]
+
