@@ -1,15 +1,8 @@
-# from assets.vehicles_data import vehicles_data
-# from assets.website_data import website_data
-
-# vehicles_on_website = vehicles_data.copy()
-# vehicles_on_website.extend(website_data)
-
-
-
-# print(vehicles_on_website)
-
-# # Method 2: Using dictionary unpacking (**)
-# # vehicles_on_website = {**vehicles_data, **website_data}
-
-# # print(vehicles_on_website)
-
+vehicle_on_website = [
+    {"website_id": 1 , "vehicle_id": 1},
+    {"website_id": 1 , "vehicle_id": 2},
+    {"website_id": 2 , "vehicle_id": 3},
+    {"website_id": 2 , "vehicle_id": 4},
+    {"website_id": 3 , "vehicle_id": 5},
+    {"website_id": 3 , "vehicle_id": 6},
+]
