@@ -31,7 +31,7 @@ c.execute("""CREATE TABLE IF NOT EXISTS vehicles_on_website
             vehicle_id INTEGER,
             FOREIGN KEY (website_id) REFERENCES websites(website_id),
             FOREIGN KEY (vehicle_id) REFERENCES vehicles(vehicle_id),
-            PRIMARY KEY (website_id, vehicle_id));
+            PRIMARY KEY (ID));
           """)
 
 # Clean vehicles_on_website before inserting data in it:
@@ -40,6 +40,7 @@ c.execute("DELETE FROM vehicles_on_website")
 # Insert data into vehicles table
 for item in vehicles_data:
     c.execute("INSERT INTO vehicles (name, subcategory, price) VALUES (?, ?, ?)", (item['name'], item['subcategory'], item['price']))
+    vehicle_id = c.lastrowid  # Retrieve the auto-generated vehicle_id
 
 # Insert data into website table
 for item in website_data:

@@ -1,3 +1,4 @@
+from src.assets.vehicles_on_website import vehicles_on_website
 from src.assets.website_data import website_data
 from src.assets.vehicles_data import vehicles_data
 from src.assets.banner import *
@@ -31,15 +32,17 @@ def main():
     print()
     print()
     while True:
-        print("Which table would you like to check the data in ?")
+        print("Which table would you like to check data from ?")
         print()
-        print("\t1. website_data")
-        print("\t2. vehicles_data")
-        print("\t3. Quit the application")
+        print("\t1. Websites Table, individually.")
+        print("\t2. Vehicles Table, individually.")
+        print("\t3. Full Data Table.")
+        print("\t4. Quit the application")
         print()
         choice = input("Type the number of your choice: ")
         
         if choice == "1":
+            print()
             print()
             website_data_truncated = [{**entry, "url": truncate_url(entry["url"])} for entry in website_data]
             print(tabulate(website_data_truncated, headers='keys', tablefmt="grid"))
@@ -51,7 +54,14 @@ def main():
             print()
         elif choice == "3":
             print()
-            print("Thank you for using the application. Goodbye!")
+            print()
+            print('\t We apologise, this functionality is still working in progress.')
+            print()
+            print()
+        elif choice == "4":
+            print()
+            print()
+            print("\t Thank you for using the application. Goodbye!")
             print()
             print()
             break
