@@ -49,3 +49,20 @@ def print_table(table):
     # Commit changes and close connection
     conn.commit()
     conn.close()
+
+def join_table(table):
+    conn = sqlite3.connect('..\..\database\terberg.db')
+    c = conn.cursor()
+    # Query the Database
+    c.execute("SELECT rowid,* FROM {}".format(table))
+    items =c.fetchall()
+    # print(items)
+
+    for item in items:
+        # print(str(item[0]) + " " + item[1] + "| \t" + item[2] + " " + str(item[3]))
+        print(item)
+    # print(c.fetchone()[0])
+
+    # Commit changes and close connection
+    conn.commit()
+    conn.close()
