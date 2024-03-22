@@ -17,5 +17,14 @@ def print_banner():
     print("+" + "-" * (width - 2) + "+")
     # Example of printing the banner
 
+def view_or_manage_data():
+    view_or_manage = input("""A) What would you like to do ?
+
+            \t1. View Data.
+            \t2. Manage Data.
+
+    Type the number of your choice: """)
+    return view_or_manage
+
 def truncate_url(url, max_length=30):
     return (url[:max_length] + '...') if len(url) > max_length else url
