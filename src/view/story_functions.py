@@ -19,7 +19,7 @@ def print_banner():
     print("+" + "-" * (width - 2) + "+")
     # Example of printing the banner
 
-def view_or_manage_data():
+def question_view_or_manage_data():
     view_or_manage = input("""A) What would you like to do ?
 
             \t1. View Data.
@@ -27,6 +27,17 @@ def view_or_manage_data():
 
     Type the number of your choice: """)
     return view_or_manage
+
+def question_witch_table_display():
+    choice = input("""Which table would you like to check data from ?
+
+                \t1. Websites Table, individually.
+                \t2. Vehicles Table, individually.
+                \t3. Full Data Table.
+                \t4. Quit the application
+
+Type the number of your choice: """)
+    return choice
 
 def truncate_url(url, max_length=30):
     return (url[:max_length] + '...') if len(url) > max_length else url

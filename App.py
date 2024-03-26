@@ -11,20 +11,11 @@ def main():
     print_banner()
     print('\n' * 2)
     while True:
-        view_manage = view_or_manage_data()
+        view_manage = question_view_or_manage_data()
         
-        if view_manage == "1":
-                
+        if view_manage == "1":        
             while True:
-                choice = input("""Which table would you like to check data from ?
-
-                \t1. Websites Table, individually.
-                \t2. Vehicles Table, individually.
-                \t3. Full Data Table.
-                \t4. Quit the application
-
-Type the number of your choice: """)
-                
+                choice = question_witch_table_display() 
                 if choice == "1":
                     display_website_table(website_data)
                 elif choice == "2":
