@@ -1,9 +1,9 @@
-from src.assets.vehicles_on_website import vehicles_on_website
+# from src.assets.vehicles_on_website import vehicles_on_website
 from src.assets.website_data import website_data
 from src.assets.vehicles_data import vehicles_data
 from src.assets.banner import *
 from src.view.story_functions import *
-import src.model.crud_functions
+# import src.model.crud_functions
 from tabulate import tabulate
 
 def main():
@@ -26,32 +26,22 @@ def main():
 Type the number of your choice: """)
                 
                 if choice == "1":
-                    print('\n' * 2)
-                    website_data_truncated = [{**entry, "url": truncate_url(entry["url"])} for entry in website_data]
-                    print(tabulate(website_data_truncated, headers='keys', tablefmt="grid"))
-                    print('\n' * 2)
+                    display_website_table(website_data)
                 elif choice == "2":
-                    print('\n' * 2)
-                    vehicles_data_with_rowid = [{"rowid": i+1, **vehicle} for i, vehicle in enumerate(vehicles_data)]
-                    print(tabulate(vehicles_data_with_rowid, headers="keys", tablefmt="grid"))
-                    print('\n' * 2)
+                    display_vehicles_table(vehicles_data)
                 elif choice == "3":
-                    print('\n' * 2)
-                    print('\t We apologise, this functionality is still working in progress.')
-                    print('\n' * 2)
+                    display_full_data_table()
                 elif choice == "4":
-                    print('\n' * 2)
-                    print("\t Thank you for using the application. Goodbye!")
-                    print('\n' * 2)
-                    break  
+                    display_quit_message()
+                    break
                 else:
                     print('\n' * 2)
                     print("Invalid choice. Please select a valid option.")
                     print('\n' * 2)
-        
+            break   
         elif view_manage == "2":
-            print("Working in progress !")
-        break
+            print("Working in progress !\n")
+        
 if __name__ == "__main__":
     main()
 
