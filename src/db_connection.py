@@ -3,6 +3,8 @@ from assets.vehicles_data import vehicles_data
 from assets.website_data import website_data
 
 
+
+
 # Create a connection to the database
 conn = sqlite3.connect('../database/terberg.db')
 
@@ -33,6 +35,7 @@ c.execute("""CREATE TABLE IF NOT EXISTS vehicles_on_website
             FOREIGN KEY (vehicle_id) REFERENCES vehicles(vehicle_id),
             PRIMARY KEY (ID));
           """)
+
 
 # Clean vehicles_on_website before inserting data in it:
 c.execute("DELETE FROM vehicles_on_website")

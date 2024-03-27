@@ -1,10 +1,11 @@
 # from src.assets.vehicles_on_website import vehicles_on_website
+from src.model.crud_functions import *
 from src.assets.website_data import website_data
 from src.assets.vehicles_data import vehicles_data
 from src.assets.banner import *
 from src.view.story_functions import *
 # import src.model.crud_functions
-from tabulate import tabulate
+# from tabulate import tabulate
 
 def main():
     print('\n' * 2)
@@ -21,7 +22,8 @@ def main():
                 elif choice == "2":
                     display_vehicles_table(vehicles_data)
                 elif choice == "3":
-                    display_full_data_table()
+                    # display_full_data_table()
+                    display_joinned_table()
                 elif choice == "4":
                     display_quit_message()
                     break
